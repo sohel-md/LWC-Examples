@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Search Contacts" icon-name="custom:custom63">
+      <div class="slds-m-around_medium">
+        <lightning-input
+          type="search"
+          onchange={handleKeyChange}
+          class="slds-m-bottom_small"
+          label="Search"
+          value={searchKey}
+        ></lightning-input>
+
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <tr>
+                <td><b>Name</b></td>
+                <td><b>Phone</b></td>
+                <td><b>Email</b></td>
+            </tr>
+
+        <template lwc:if={contacts.data}>
+          <template for:each={contacts.data} for:item="contact">
+            <tr key={contact.Id}>
+				<td>
+					{contact.Name}
+				</td>
+
+                <td>
+					{contact.Phone}
+				</td>
+				
+                <td>
+                    {contact.Email}
+                </td>
+</tr>
+          </template>
+        </template>
+        </table>
+      </div>
+    </lightning-card>
+  </template>
+  
