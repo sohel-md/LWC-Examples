@@ -13,7 +13,6 @@ export default class LwcPagination extends LightningElement {
     totalPages; //Total no.of pages
     pageNumber = 1; //Page number    
     recordsToDisplay = []; //Records to be displayed on the page
-    
 
     get bDisableFirst() {
         return this.pageNumber == 1;
@@ -105,5 +104,6 @@ export default class LwcPagination extends LightningElement {
             }
             this.recordsToDisplay.push(this.records[i]);
         }
+        
     }
 }

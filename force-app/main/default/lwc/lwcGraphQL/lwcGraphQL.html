@@ -1,0 +1,23 @@
+<!-- simpleGQL.html -->
+<template>
+    <lightning-card title="LWC GraphQL">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+		<tr>
+			<td><b>First Name</b></td>
+            <td><b>Last Name</b></td>
+		</tr>
+    <template lwc:if={results}>
+      <template for:each={results} for:item="contact">
+        <tr key={contact.Id}>
+            <td>
+                {contact.FirstName.value}
+            </td>
+            <td>
+                {contact.LastName.value}
+            </td>
+        </tr>
+      </template>
+    </template>
+    </table>
+</lightning-card>
+</template>
