@@ -48,16 +48,10 @@
                         <tr>
                             <td><b>Last Name</b></td>
                         </tr>
-                        <tr>
-                            <td><b>AccountId</b></td>
-                        </tr>
                         <template for:each={records} for:item="con">
                             <tr key={con.Id}>
                                 <td>
                                     {con.LastName}
-                                </td>
-                                <td>
-                                    {con.AccountId}
                                 </td>
                             </tr>
                         </template>
