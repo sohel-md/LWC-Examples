@@ -10,6 +10,11 @@ export default class LWCAccountContacts extends LightningElement {
     @api records;
     @track isModalOpen = false;
     
+    searchValue;
+    handleSearch(event){
+        this.searchValue = event.target.value;
+        console.log('search value '+this.searchValue);
+    }
     handleUpdate(event){
         this.currentRecordId=event.target.value;
         console.log('@@currentRecordId@@@'+this.currentRecordId);

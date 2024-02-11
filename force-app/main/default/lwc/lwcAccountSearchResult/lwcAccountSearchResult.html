@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+            <c-lwc-account-search-form onsearchaccountcontact={searchAccountContactHander}></c-lwc-account-search-form>
+    </lightning-card>
+
+    <lightning-card>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="Id"
+                data={accountsList.data}
+                columns={columns}
+                hide-checkbox-column="true"
+                show-row-number-column="true"
+                >
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+</template>
