@@ -43,16 +43,18 @@
                     <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Contact Records</h2>
                 </header>
                 <!-- Modal/Popup Box LWC body starts here -->
-                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-modal__content" id="modal-content-id-1">
                     <table class="slds-table slds-table_cell-buffer slds-table_bordered">
                         <tr>
                             <td><b>Last Name</b></td>
+                            <td><b>Id</b></td>
+                            <td><b>Account Id</b></td>
                         </tr>
                         <template for:each={records} for:item="con">
                             <tr key={con.Id}>
-                                <td>
-                                    {con.LastName}
-                                </td>
+                                <td> {con.LastName} </td>
+                                <td> {con.Id} </td>
+                                <td> {con.AccountId} </td>
                             </tr>
                         </template>
                     </table>
@@ -65,5 +67,4 @@
         </section>
         <div class="slds-backdrop slds-backdrop_open"></div>
     </template>
-
 </template>
